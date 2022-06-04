@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ItemType } from "../../hooks/useFetchData";
+import { StyledPagination } from "./style/";
 
 export const Pagination = (taskItems: ItemType[]) => {
   const [showPageItems, setShowPageItems] = useState<ItemType[]>([]);
@@ -10,10 +11,10 @@ export const Pagination = (taskItems: ItemType[]) => {
 
   const PaginationController = () => {
     return (
-      <ul>
+      <StyledPagination>
         <li>1</li>
         <li>2</li>
-      </ul>
+      </StyledPagination>
     );
   };
 
