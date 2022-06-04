@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { Sample } from "../../pages/components/Sample";
+import Sample from "../../pages/components/index";
 
 describe("Sample", () => {
   it("renders a heading", () => {
