@@ -1,16 +1,16 @@
 import { useFetchData } from "../hooks/useFetchData";
+import { Pagination } from "../components/Pagination";
 
 const Sample = () => {
   const { isLoading, isError, items } = useFetchData();
-  // console.log(isLoading, isError, items)
+  const { showPageItems, PaginationController } = Pagination(items);
+  console.log(showPageItems);
 
   return (
     <ul>
       {!isLoading && <p>...Loading</p>}
       {isError && <p>server error</p>}
-      {items.map((item) => (
-        <li key={item.id}>{item.title}</li>
-      ))}
+      {PaginationController()}
     </ul>
   );
 };

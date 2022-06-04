@@ -1,7 +1,7 @@
 import axios, { AxiosResponse, AxiosError } from "axios";
 import { useState, useEffect } from "react";
 
-type ItemType = {
+export type ItemType = {
   userId: number;
   id: number;
   title: string;
