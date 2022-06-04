@@ -1,4 +1,4 @@
-import { useFetchData } from "./hooks/useFetchData";
+import { useFetchData } from "../hooks/useFetchData";
 
 const Sample = () => {
   const { isLoading, isError, items } = useFetchData();
