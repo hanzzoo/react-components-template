@@ -4,6 +4,14 @@ const Sample = () => {
   const { isLoading, isError, items } = useFetchData();
   // console.log(isLoading, isError, items)
 
-  return <h1>welcome to next.js!</h1>;
+  return (
+    <ul>
+      {!isLoading && <p>...Loading</p>}
+      {isError && <p>server error</p>}
+      {items.map((item) => (
+        <li key={item.id}>{item.title}</li>
+      ))}
+    </ul>
+  );
 };
 export default Sample;
